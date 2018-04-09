@@ -1,4 +1,4 @@
-package info.androidhive.cardview;
+package co.edu.konradlorenz.cardview;
 
 /**
  * Created by Lincoln on 18/05/16.

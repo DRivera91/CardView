@@ -1,4 +1,4 @@
-package info.androidhive.cardview;
+package co.edu.konradlorenz.cardview;
 
 import android.content.res.Resources;
 import android.graphics.Rect;
@@ -18,6 +18,8 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import co.edu.konradlorenz.cardview.R;
 
 public class MainActivity extends AppCompatActivity {
 

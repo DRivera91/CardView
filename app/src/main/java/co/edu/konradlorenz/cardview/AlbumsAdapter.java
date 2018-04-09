@@ -1,4 +1,4 @@
-package info.androidhive.cardview;
+package co.edu.konradlorenz.cardview;
 
 import android.content.Context;
 import android.support.v7.widget.PopupMenu;
@@ -16,8 +16,10 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import co.edu.konradlorenz.cardview.R;
+
 /**
- * Created by Ravi Tamada on 18/05/16.
+ * Created by jiacontrerasp on 02/04/18.
  */
 public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHolder> {
 
@@ -61,7 +63,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     public void onBindViewHolder(final MyViewHolder holder, int position) {
         Album album = albumList.get(position);
         holder.title.setText(album.getName());
-        holder.count.setText(album.getNumOfSongs() + " songs");
+        holder.count.setText(album.getNumOfSongs() + " canciones");
 
         // loading album cover using Glide library
         Glide.with(mContext).load(album.getThumbnail()).into(holder.thumbnail);
@@ -75,7 +77,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     }
 
     /**
-     * Showing popup menu when tapping on 3 dots
+     * Mostrar menú emergente al tocar en 3 puntos
      */
     private void showPopupMenu(View view) {
         // inflate menu
@@ -87,7 +89,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     }
 
     /**
-     * Click listener for popup menu items
+     * Evento Click listener para el menú emergente
      */
     class MyMenuItemClickListener implements PopupMenu.OnMenuItemClickListener {
 
@@ -98,10 +100,10 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
         public boolean onMenuItemClick(MenuItem menuItem) {
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
-                    Toast.makeText(mContext, "Add to favourite", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Agregar a favoritos", Toast.LENGTH_SHORT).show();
                     return true;
                 case R.id.action_play_next:
-                    Toast.makeText(mContext, "Play next", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(mContext, "Siguiente canción", Toast.LENGTH_SHORT).show();
                     return true;
                 default:
             }

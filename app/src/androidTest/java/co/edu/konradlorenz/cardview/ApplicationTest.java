@@ -1,4 +1,4 @@
-package info.androidhive.cardview;
+package co.edu.konradlorenz.cardview;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
