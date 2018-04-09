@@ -29,6 +29,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView title, count;
         public ImageView thumbnail, overflow;
+        private View elementView;
 
         public MyViewHolder(View view) {
             super(view);
@@ -36,12 +37,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
             count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             overflow = (ImageView) view.findViewById(R.id.overflow);
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(mContext,"Click",Toast.LENGTH_LONG).show();
-                }
-            });
+            elementView = view;
         }
     }
 
@@ -61,7 +57,14 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, int position) {
-        Album album = albumList.get(position);
+        final Album album = albumList.get(position);
+
+        holder.elementView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(mContext,"Click seleccionando: "+album.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
         holder.title.setText(album.getName());
         holder.count.setText(album.getNumOfSongs() + " canciones");
 
