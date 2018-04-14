@@ -5,4 +5,24 @@
     <string name="action_play_next">Siguiente canción</string>
     <string name="backdrop_title">Música para el momento</string>
     <string name="backdrop_subtitle">Los mejores 20</string>
+    <string name="sings">Canciones</string>
+    <string name="action_click">Click seleccionando: </string>
+    <string name="Album">Album</string>
+    <string name="album1">True Romance</string>
+    <string name="album2">Xscpae</string>
+    <string name="album3">Maroon 5</string>
+    <string name="album4">Born to Die</string>
+    <string name="album5">Honeymoon</string>
+    <string name="album6">I Need a Doctor</string>
+    <string name="album7">Loud</string>
+    <string name="album8">Legend</string>
+    <string name="album9">Hello</string>
+    <string name="album10">Greatest Hits</string>
+    <string name="album11">The 20/20 Experience</string>
+    <string name="album12">Ok computer</string>
+    <string name="album13">Dawn</string>
+    <string name="album14">Get a grip</string>
+
+
+
 </resources>

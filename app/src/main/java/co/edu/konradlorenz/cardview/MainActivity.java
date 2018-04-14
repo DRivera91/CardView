@@ -1,5 +1,6 @@
 package co.edu.konradlorenz.cardview;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
+
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
 
@@ -103,36 +105,52 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.album8,
                 R.drawable.album9,
                 R.drawable.album10,
-                R.drawable.album11};
+                R.drawable.album11,
+                R.drawable.album12,
+                R.drawable.album13,
+                R.drawable.album14
+        };
 
-        Album a = new Album("True Romance", 13, covers[0]);
+        Album a = new Album(getString(R.string.album1), 13, covers[0]);
         albumList.add(a);
 
-        a = new Album("Xscpae", 8, covers[1]);
+        a = new Album(getString(R.string.album2), 8, covers[1]);
         albumList.add(a);
 
-        a = new Album("Maroon 5", 11, covers[2]);
+        a = new Album(getString(R.string.album3), 11, covers[2]);
         albumList.add(a);
 
-        a = new Album("Born to Die", 12, covers[3]);
+        a = new Album(getString(R.string.album4), 12, covers[3]);
         albumList.add(a);
 
-        a = new Album("Honeymoon", 14, covers[4]);
+        a = new Album(getString(R.string.album5), 14, covers[4]);
         albumList.add(a);
 
-        a = new Album("I Need a Doctor", 1, covers[5]);
+        a = new Album(getString(R.string.album6), 1, covers[5]);
         albumList.add(a);
 
-        a = new Album("Loud", 11, covers[6]);
+        a = new Album(getString(R.string.album7), 11, covers[6]);
         albumList.add(a);
 
-        a = new Album("Legend", 14, covers[7]);
+        a = new Album(getString(R.string.album8), 14, covers[7]);
         albumList.add(a);
 
-        a = new Album("Hello", 11, covers[8]);
+        a = new Album(getString(R.string.album9), 11, covers[8]);
         albumList.add(a);
 
-        a = new Album("Greatest Hits", 17, covers[9]);
+        a = new Album(getString(R.string.album10), 17, covers[9]);
+        albumList.add(a);
+
+        a = new Album(getString(R.string.album11), 10, covers[10]);
+        albumList.add(a);
+
+        a = new Album(getString(R.string.album12), 15, covers[11]);
+        albumList.add(a);
+
+        a = new Album(getString(R.string.album13), 13, covers[12]);
+        albumList.add(a);
+
+        a = new Album(getString(R.string.album14), 15, covers[13]);
         albumList.add(a);
 
         adapter.notifyDataSetChanged();

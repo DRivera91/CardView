@@ -39,6 +39,7 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
             overflow = (ImageView) view.findViewById(R.id.overflow);
             elementView = view;
         }
+
     }
 
 
@@ -53,6 +54,10 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
                 .inflate(R.layout.album_card, parent, false);
 
         return new MyViewHolder(itemView);
+    }
+
+    public interface OnItemClickListener{
+        void onItemClick(String name, int position);
     }
 
     @Override
@@ -102,6 +107,8 @@ public class AlbumsAdapter extends RecyclerView.Adapter<AlbumsAdapter.MyViewHold
 
         @Override
         public boolean onMenuItemClick(MenuItem menuItem) {
+
+            //mContext.getString()
             switch (menuItem.getItemId()) {
                 case R.id.action_add_favourite:
                     Toast.makeText(mContext, "Agregar a favoritos", Toast.LENGTH_SHORT).show();

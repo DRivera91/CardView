@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/blue_grey_500</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -13,5 +14,65 @@
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Mitema" parent="Theme.AppCompat.NoActionBar" />
+    <style name="EditText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Texts">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Texts.title_album">
+        <item name="android:paddingLeft">@dimen/album_title_padding</item>
+        <item name="android:paddingRight">@dimen/album_title_padding</item>
+        <item name="android:paddingTop">@dimen/album_title_padding</item>
+        <item name="android:textColor">@color/album_title</item>
+        <item name="android:textSize">@dimen/album_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Texts.count">
+        <item name="android:paddingLeft">@dimen/album_title_padding</item>
+        <item name="android:paddingRight">@dimen/album_title_padding</item>
+        <item name="android:paddingBottom">@dimen/songs_count_padding_bottom</item>
+        <item name="android:textSize">@dimen/songs_count</item>
+        <item name="android:textColor">@color/album_title</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ImageOverflow">
+        <item name="android:layout_width">@dimen/ic_album_overflow_width</item>
+        <item name="android:layout_height">@dimen/ic_album_overflow_height</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginTop">@dimen/ic_album_overflow_margin_top</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:src">@drawable/ic_dots</item>
+    </style>
+    <style name="ImageThumbnail">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/album_cover_height</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+    <style name="Titles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="Titles.title">
+        <item name="android:text">@string/backdrop_title</item>
+        <item name="android:textSize">@dimen/backdrop_title</item>
+    </style>
+    <style name="Titles.subtitle">
+        <item name="android:text">@string/backdrop_subtitle</item>
+        <item name="android:textSize">@dimen/backdrop_subtitle</item>
+    </style>
+    <style name="Imagebackdrop">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
 
 </resources>
